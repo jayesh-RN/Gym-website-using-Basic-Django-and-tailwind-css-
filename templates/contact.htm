@@ -1,0 +1,57 @@
+{%extends 'base.htm'%}
+
+{%block title%}
+contact
+{%endblock title%}
+
+{%block body%}
+<div class="container-fluid px-0 mb-3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDwbocJjCAJoXdwFBXNhTEqsWDY-RMxMIbIA&usqp=CAU" class="d-block w-100 mx-0" alt="...">
+</div>
+<div  class="container mb-3 py-4">
+    <h1 class="text-center">Contact Us</h1>
+
+    <form method="post" action="/contact" class="row g-3">
+        {%csrf_token%}
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Enter your e-mail">
+          </div>
+        
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity" name="city" placeholder="e.g. Ulhasnagar">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select" name="state">
+            <option selected>Choose...</option>
+            <option>Maharastra</option>
+            <option>Delhi</option>
+            <option>Uttar pradesh</option>
+            <option>Gujrat</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="phone" class="form-control" id="Phone" name="phone">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Remember Me
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
+      </form>
+
+</div>
+{%endblock body%}
